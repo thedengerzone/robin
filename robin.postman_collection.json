@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "1a05e3ca-6101-44f1-b459-a58e5199fe3c",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26558961"
+	},
+	"item": [
+		{
+			"name": "Common times no working hours",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"users\": [\n    {\n      \"user_id\": 1,\n      \"working_hours\": {\n        \"start\": \"09:00\",\n        \"end\": \"17:00\",\n        \"time_zone\": \"America/New_York\"\n      },\n      \"events\": [\n        {\n          \"id\": 2,\n          \"title\": \"Meeting B\",\n          \"start\": \"2019-01-01T09:00:00-0500\",\n          \"end\": \"2019-01-01T10:00:00-0500\"\n        },\n        {\n          \"id\": 4,\n          \"title\": \"Meeting D\",\n          \"start\": \"2019-01-01T11:00:00-0500\",\n          \"end\": \"2019-01-01T12:00:00-0500\"\n        },\n        {\n          \"id\": 6,\n          \"title\": \"Meeting F\",\n          \"start\": \"2019-01-01T12:00:00-0500\",\n          \"end\": \"2019-01-01T12:45:00-0500\"\n        },\n        {\n          \"id\": 8,\n          \"title\": \"Meeting H\",\n          \"start\": \"2019-01-01T14:00:00-0500\",\n          \"end\": \"2019-01-01T15:30:00-0500\"\n        }\n      ]\n    },\n    {\n      \"user_id\": 2,\n      \"time_zone\": \"America/New_York\",\n      \"working_hours\": {\n        \"start\": \"08:00\",\n        \"end\": \"16:00\",\n        \"time_zone\": \"America/New_York\"\n      },\n      \"events\": [\n        {\n          \"id\": 1,\n          \"title\": \"Meeting A\",\n          \"start\": \"2019-01-01T09:00:00-0500\",\n          \"end\": \"2019-01-01T09:45:00-0500\"\n        },\n        {\n          \"id\": 3,\n          \"title\": \"Meeting C\",\n          \"start\": \"2019-01-01T10:00:00-0500\",\n          \"end\": \"2019-01-01T10:15:00-0500\"\n        },\n        {\n          \"id\": 5,\n          \"title\": \"Meeting E\",\n          \"start\": \"2019-01-01T11:00:00-0500\",\n          \"end\": \"2019-01-01T13:45:00-0500\"\n        },\n        {\n          \"id\": 7,\n          \"title\": \"Meeting G\",\n          \"start\": \"2019-01-01T13:30:00-0500\",\n          \"end\": \"2019-01-01T14:30:00-0500\"\n        }\n      ]\n    },\n    {\n      \"user_id\": 3,\n      \"working_hours\": {\n        \"start\": \"10:00\",\n        \"end\": \"18:00\",\n        \"time_zone\": \"America/Los_Angeles\"\n      },\n      \"events\": [\n        {\n          \"id\": 4,\n          \"title\": \"Meeting D\",\n          \"start\": \"2019-01-01T11:00:00-0800\",\n          \"end\": \"2019-01-01T12:00:00-0800\"\n        },\n        {\n          \"id\": 6,\n          \"title\": \"Meeting F\",\n          \"start\": \"2019-01-01T11:30:00-0800\",\n          \"end\": \"2019-01-01T12:45:00-0800\"\n        },\n        {\n          \"id\": 9,\n          \"title\": \"Meeting I\",\n          \"start\": \"2019-01-01T15:30:00-0800\",\n          \"end\": \"2019-01-01T16:30:00-0800\"\n        },\n        {\n          \"id\": 10,\n          \"title\": \"Meeting J\",\n          \"start\": \"2019-01-01T17:30:00-0800\",\n          \"end\": \"2019-01-01T18:00:00-0800\"\n        }\n      ]\n    }\n  ],\n  \"startTime\": \"2019-01-01T07:00:00-0800\",\n  \"endTime\": \"2019-01-01T17:30:00-0800\",\n  \"interval\": 15\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/common-meeting-times",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"common-meeting-times"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Common times with working hours",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"users\": [\n    {\n      \"user_id\": 1,\n      \"working_hours\": {\n        \"start\": \"09:00\",\n        \"end\": \"17:00\",\n        \"time_zone\": \"America/New_York\"\n      },\n      \"events\": [\n        {\n          \"id\": 2,\n          \"title\": \"Meeting B\",\n          \"start\": \"2019-01-01T09:00:00-0000\",\n          \"end\": \"2019-01-01T10:00:00-0000\"\n        }\n      ]\n    },\n    {\n      \"user_id\": 3,\n      \"working_hours\": {\n        \"start\": \"10:00\",\n        \"end\": \"18:00\",\n        \"time_zone\": \"America/Los_Angeles\"\n      },\n      \"events\": [\n        {\n          \"id\": 4,\n          \"title\": \"Meeting D\",\n          \"start\": \"2019-01-01T11:00:00-0000\",\n          \"end\": \"2019-01-01T12:00:00-0000\"\n        }\n      ]\n    }\n  ],\n  \"startTime\": \"2019-01-01T07:00:00-0000\",\n  \"endTime\": \"2019-01-01T17:30:00-0000\",\n  \"interval\": 15\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/common-meeting-times-within-working-hours",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"common-meeting-times-within-working-hours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Common times by interval",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"users\": [\n    {\n      \"user_id\": 1,\n      \"working_hours\": {\n        \"start\": \"09:00\",\n        \"end\": \"17:00\",\n        \"time_zone\": \"America/New_York\"\n      },\n      \"events\": [\n        {\n          \"id\": 2,\n          \"title\": \"Meeting B\",\n          \"start\": \"2019-01-01T09:00:00-0000\",\n          \"end\": \"2019-01-01T10:00:00-0000\"\n        }\n      ]\n    },\n    {\n      \"user_id\": 3,\n      \"working_hours\": {\n        \"start\": \"10:00\",\n        \"end\": \"18:00\",\n        \"time_zone\": \"America/Los_Angeles\"\n      },\n      \"events\": [\n        {\n          \"id\": 4,\n          \"title\": \"Meeting D\",\n          \"start\": \"2019-01-01T11:00:00-0000\",\n          \"end\": \"2019-01-01T12:00:00-0000\"\n        }\n      ]\n    }\n  ],\n  \"startTime\": \"2019-01-01T07:00:00-0000\",\n  \"endTime\": \"2019-01-01T17:30:00-0000\",\n  \"interval\": 15\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/meeting-blocks-by-user-availability",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"meeting-blocks-by-user-availability"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
