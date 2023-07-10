@@ -106,6 +106,9 @@ function findCommonMeetingTimesWithinWorkingHours(users: User[], startTime: stri
             if (Date.parse(startTime) < Date.parse(mergedTimeSlots[i].start)) {
                 freeTimeSlots.push({start: startTime, end: mergedTimeSlots[i].start})
                 startTime = mergedTimeSlots[i].end;
+            }else if (Date.parse(startTime) < Date.parse(mergedTimeSlots[i].end)){
+                startTime = mergedTimeSlots[i].end
+
             }
 
         }
