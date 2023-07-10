@@ -1,6 +1,10 @@
 import http from 'http';
 import { parse } from 'url';
-import { commonMeetingTimesWithoutWorkingHours, findCommonMeetingTimesWithinWorkingHours, findMeetingBlocksByUserAvailability } from './commonMettingTimesService';
+import {
+    commonMeetingTimesWithoutWorkingHours,
+    findCommonMeetingTimesWithinWorkingHours,
+    findMeetingBlocksByUserAvailability
+} from './commonMettingTimesService';
 
 const server = http.createServer((req : any, res : any) => {
     const { pathname } = parse(req.url as string, true);
